@@ -97,6 +97,6 @@ table.table .form-control.error {
     border-color: #f50000;
 }
 
-table.table td .add {
+table.table td .add,table.table td .submit,table.table td .cancel{
     display: none;
 }
