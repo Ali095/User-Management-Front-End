@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Facebook Login JavaScript Example</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="../js/fbSDK.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <button onclick="javascript:initFBSDK(document, 'script', 'facebook-jssdk')"
+        scope="public_profile,email,user_posts,user_birthday,user_location,user_age_range">
+        Login With Facebook
+      </button>
+      <div id="status">
+      </div>
+    </div>
+
+    <div class="row col-5">
+      <textarea style="margin-top:25px;width:100%;height:450px" id="message" placeholder="enter the message to post"></textarea>
+      <button class="btn btn-block btn-group-lg btn-primary" type="button" onclick="javascript:postOnFBPage()">Post</button>
+    </div>
+  </div>
+  <div class="container">
+      <div class="table-wrapper">
+          <div class="table-title">
+              <div class="row">
+                  <div class="col-sm-8">
+                      <h2>User <b>POSTS</b></h2>
+                  </div>
+              </div>
+          </div>
+          <table class="table table-bordered">
+              <thead>
+                  <tr>
+                      <th>Message</th>
+                      <th>Action</th>
+                  </tr>
+              </thead>
+              <tbody id="tBody-for-loop">
+              </tbody>
+          </table>
+      </div>
+  </div>
+</body>
+
+</html>
